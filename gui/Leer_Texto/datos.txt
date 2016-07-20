@@ -1,0 +1,12 @@
+MATLAB (abreviatura de MATrix LABoratory, "laboratorio de matrices") es una herramienta de software matemático 
+que ofrece un entorno de desarrollo integrado (IDE) con un lenguaje de programación propio (lenguaje M). 
+Está disponible para las plataformas Unix, Windows y Mac OS X.
+Entre sus prestaciones básicas se hallan: la manipulación de matrices, la representación de datos y funciones, 
+la implementación de algoritmos, la creación de interfaces de usuario (GUI) y la comunicación con programas en 
+otros lenguajes y con otros dispositivos hardware. El paquete MATLAB dispone de dos herramientas adicionales 
+que expanden sus prestaciones, a saber, Simulink (plataforma de simulación multidominio) y GUIDE (editor de 
+interfaces de usuario - GUI). Además, se pueden ampliar las capacidades de MATLAB con las cajas de herramientas 
+(toolboxes); y las de Simulink con los paquetes de bloques (blocksets).
+Es un software muy usado en universidades y centros de investigación y desarrollo. En los últimos años ha 
+aumentado el número de prestaciones, como la de programar directamente procesadores digitales de señal o crear 
+código VHDL.

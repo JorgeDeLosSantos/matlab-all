@@ -1,0 +1,23 @@
+function g15_EditableListBox
+f = figure('MenuBar','none',...
+    'NumberTitle','off',...
+    'Name','Ejemplo GUI',...
+    'Position',[0 0 300 200]);
+centerfig(f);
+
+lista = {'Basic','C','C++','Java','Perl','Python'};
+uicontrol('style','listbox',...
+    'String',lista,...
+    'Units','Normalized',...
+    'Position',[0.1 0.1 0.8 0.8],...
+    'Callback',@edit_item);
+
+    function edit_item(src,~)
+        strs = get(src,'String');
+        k = get(src,'Value');
+        nuevo = inputdlg('Inserte el nuevo valor');
+        strs{k}=nuevo{1};
+        set(src,'String',strs);
+    end
+
+end

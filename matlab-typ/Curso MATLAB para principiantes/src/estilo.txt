@@ -1,0 +1,1 @@
+{"styles": [["fuentes", {"fontSize": 8, "textColor": green}]]}

@@ -1,0 +1,32 @@
+Institución,INGENIERIA,General
+I.T. de Tijuana,56.667,56.67
+I.T. de Tuxtla Gutiérrez,54.667,54.67
+I.T. de Lázaro Cárdenas,54.667,54.67
+I.T. de Puebla,54.000,54.00
+I.T. de Cd. Juárez,52.667,52.67
+I.T. de Hermosillo,52.000,52.00
+I.T. de Toluca,50.667,50.67
+I.T. de Zacatepec,47.334,47.33
+I.T.S. de Occte. del Edo. de Hidalgo,46.667,46.67
+I.T. de Chihuahua,46.000,46.00
+I.T. de Morelia,46.000,46.00
+I.T. de Culiacán,46.000,46.00
+I.T. de Cd. Guzmán,46.000,46.00
+I.T.S. de Zacapoaxtla,45.333,45.33
+I.T. de La Paz,44.667,44.67
+I.T. de Cd. Madero,44.667,44.67
+I.T.S. de Coatzacoalcos,43.333,43.33
+I.T. de Mexicali,43.333,43.33
+I.T. de Oaxaca,42.667,42.67
+I.T. de La Laguna,42.667,42.67
+I.T. de Minatitlán,42.667,42.67
+I.T. de Pachuca,42.000,42.00
+I.T. de Nuevo León,41.333,41.33
+I.T. de Celaya,41.333,41.33
+I.T.S. de Valladolid,38.667,38.67
+I.T. de Matamoros,38.000,38.00
+I.T. de Chilpancingo,38.000,38.00
+I.T. de Acapulco,37.333,37.33
+I.T. de Orizaba,34.000,34.00
+I.T. de Atitalaquia,30.667,30.67
+I.T. de Durango,0.000, 0.00

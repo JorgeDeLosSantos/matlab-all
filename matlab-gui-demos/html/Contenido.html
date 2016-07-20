@@ -1,0 +1,173 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Desarrollo de GUIs en MATLAB&reg;, curso pr&aacute;ctico.</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-11-11"><meta name="DC.source" content="Contenido.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Desarrollo de GUIs en MATLAB&reg;, curso pr&aacute;ctico.</h1><!--introduction--><p>Esta colecci&oacute;n de interfaces gr&aacute;ficas forma parte del proyecto MATLAB TYP, cuyo prop&oacute;sito general es compartir informaci&oacute;n acerca del uso del software MATLAB&reg;, as&iacute; como facilitar material escrito y/o audiovisual que resulte de inter&eacute;s para los usuarios hispanohablantes.</p><p>Esta versi&oacute;n ha sido escrita priorizando la legibilidad del c&oacute;digo y dejando en un segundo plano caracter&iacute;sticas que ser&iacute;an importantes en un desarrollo de software profesional. Dados los fines acad&eacute;micos de esta colecci&oacute;n de GUIs es posible que encuentre alternativas mejores a las propuestas aqu&iacute;, siendo as&iacute; y si lo considera oportuno, el autor agradecer&iacute;a cualquier sugerencia o comentario respecto a cualquier porci&oacute;n de c&oacute;digo que conforma este proyecto.</p><p><b>Versi&oacute;n:</b> 0.0.1</p><p><b>Licencia:</b>  GNU/GPL 2014</p><p><b>Fecha:</b> 01/11/2014</p><p><b>Desarrollador:</b> Jorge De Los Santos</p><p><b>E-mail:</b> <a href="mailto:delossantosmfq@gmail.com">delossantosmfq@gmail.com</a>     |    <a href="mailto:matlabtyp@gmail.com">matlabtyp@gmail.com</a></p><p><b>Blog:</b> <a href="http://matlab-typ.blogspot.mx">http://matlab-typ.blogspot.mx</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1"><tt>g01_DemoFigure.m</tt></a></li><li><a href="#2"><tt>g02_DemoStaticText.m</tt></a></li><li><a href="#3"><tt>g03_DemoButton.m</tt></a></li><li><a href="#4"><tt>g04_DemoEditText.m</tt></a></li><li><a href="#5"><tt>g05_DemoAxes.m</tt></a></li><li><a href="#6"><tt>g06_DemoPopUpMenu.m</tt></a></li><li><a href="#7"><tt>g07_DemoListBox.m</tt></a></li><li><a href="#8"><tt>g08_DemoSlider.m</tt></a></li><li><a href="#9"><tt>g09_DemoCheckBox.m</tt></a></li><li><a href="#10"><tt>g10_DemoRadioButtons</tt></a></li><li><a href="#11"><tt>g11_DemoMenu.m</tt></a></li><li><a href="#12"><tt>g12_HolaMundo.m</tt></a></li><li><a href="#13"><tt>g13_IntegraDeriva.m</tt></a></li><li><a href="#14"><tt>g14_MiniCalculadora.m</tt></a></li><li><a href="#15"><tt>g15_EditableListBox.m</tt></a></li><li><a href="#16"><tt>g16_ConversorLongitudes.m</tt></a></li><li><a href="#17"><tt>g17_Graficador.m</tt></a></li><li><a href="#18"><tt>g18_VisorImagenes.m</tt></a></li><li><a href="#19"><tt>g19_ImagenFondo.m</tt></a></li><li><a href="#20"><tt>g20_ColorRGB.m</tt></a></li></ul></div><h2><tt>g01_DemoFigure.m</tt><a name="1"></a></h2><p>Este primer ejemplo muestra como crear una ventana utilizando el elemento figure.</p><h2><tt>g02_DemoStaticText.m</tt><a name="2"></a></h2><p>Se muestran las propiedades elementales de una etiqueta de texto est&aacute;tico tales como el 'string', la posici&oacute;n, caracter&iacute;sticas de la fuente, etc...</p><h2><tt>g03_DemoButton.m</tt><a name="3"></a></h2><p>Esta GUI contiene un bot&oacute;n (Push Button) que al ser presionado modifica su color de fondo <tt>('BackgroundColor')</tt> de manera aleatoria, al igual que lo hace con el color de fuente <tt>('ForegroundColor')</tt></p><h2><tt>g04_DemoEditText.m</tt><a name="4"></a></h2><p>Muestra las propiedades b&aacute;sicas de un campo de texto editable, haciendo enf&aacute;sis precisamente en la "posibilidad" de modificar el contenido de esta.</p><h2><tt>g05_DemoAxes.m</tt><a name="5"></a></h2><p>Proporciona un ejemplo de c&oacute;mo posicionar axes y modificar sus propiedades, adem&aacute;s se tiene como ejemplo la representaci&oacute;n gr&aacute;fica de funciones dentro de dichos elementos, utilizando la funci&oacute;n plot y pasando como argumento la referencia (handle) del axes en el que debe mostrarse.</p><h2><tt>g06_DemoPopUpMenu.m</tt><a name="6"></a></h2><p>Permite cambiar el color de fondo de la ventana <tt>('figure')</tt> utilizando una lista de colores almacenada en un Pop-up-menu</p><h2><tt>g07_DemoListBox.m</tt><a name="7"></a></h2><p>Muestra como configurar el string de un listbox mediante el uso de un cell array. Adem&aacute;s de ejemplificarse como obtener el valor seleccionado de la lista contenida en el listbox y el uso de un msgbox para mostrar informaci&oacute;n o un mensaje mediante un interfaz gr&aacute;fica.</p><h2><tt>g08_DemoSlider.m</tt><a name="8"></a></h2><p>En esta interfaz gr&aacute;fica se muestra el uso de un slider. El valor obtenido del slider modifica el color de la ventana, en una variaci&oacute;n desde negro a blanco, pasando por las diversas tonalidades de grises.</p><h2><tt>g09_DemoCheckBox.m</tt><a name="9"></a></h2><p>El checkbox contenido en esta GUI permite controlar si la ventana es redimensionable, lo anterior modificando la propiedad 'resize'.</p><h2><tt>g10_DemoRadioButtons</tt><a name="10"></a></h2><p>Ejemplifica el uso de radio buttons dentro de un uibuttongroup para seleccionar solamente una opci&oacute;n. En este caso se modifica el tipo de fuente en los 'strings' de los radio buttons.</p><h2><tt>g11_DemoMenu.m</tt><a name="11"></a></h2><h2><tt>g12_HolaMundo.m</tt><a name="12"></a></h2><h2><tt>g13_IntegraDeriva.m</tt><a name="13"></a></h2><h2><tt>g14_MiniCalculadora.m</tt><a name="14"></a></h2><h2><tt>g15_EditableListBox.m</tt><a name="15"></a></h2><h2><tt>g16_ConversorLongitudes.m</tt><a name="16"></a></h2><h2><tt>g17_Graficador.m</tt><a name="17"></a></h2><h2><tt>g18_VisorImagenes.m</tt><a name="18"></a></h2><h2><tt>g19_ImagenFondo.m</tt><a name="19"></a></h2><h2><tt>g20_ColorRGB.m</tt><a name="20"></a></h2><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Desarrollo de GUIs en MATLAB(R), curso práctico.
+% Esta colección de interfaces gráficas forma parte del proyecto MATLAB
+% TYP, cuyo propósito general es compartir información acerca del uso del
+% software MATLAB(R), así como facilitar material escrito y/o audiovisual que
+% resulte de interés para los usuarios hispanohablantes.
+% 
+%
+% 
+% Esta versión ha sido escrita priorizando la legibilidad del código y
+% dejando en un segundo plano características que serían importantes en un
+% desarrollo de software profesional. Dados los fines académicos de esta
+% colección de GUIs es posible que encuentre alternativas mejores a las
+% propuestas aquí, siendo así y si lo considera oportuno, el autor
+% agradecería cualquier sugerencia o comentario respecto a cualquier
+% porción de código que conforma este proyecto.
+% 
+%
+% *Versión:* 0.0.1
+%
+% *Licencia:*  GNU/GPL 2014
+%
+% *Fecha:* 01/11/2014
+%
+% *Desarrollador:* Jorge De Los Santos
+%
+% *E-mail:* delossantosmfq@gmail.com     |    matlabtyp@gmail.com
+%
+% *Blog:* http://matlab-typ.blogspot.mx
+%
+%
+%% |g01_DemoFigure.m|
+% Este primer ejemplo muestra como crear una ventana utilizando el
+% elemento figure.
+
+%% |g02_DemoStaticText.m|
+% Se muestran las propiedades elementales de una etiqueta de texto estático
+% tales como el 'string', la posición, características de la fuente, etc...
+
+%% |g03_DemoButton.m|
+% Esta GUI contiene un botón (Push Button) que al ser presionado modifica
+% su color de fondo |('BackgroundColor')| de manera aleatoria, al igual que
+% lo hace con el color de fuente |('ForegroundColor')|
+%
+
+%% |g04_DemoEditText.m|
+%
+% Muestra las propiedades básicas de un campo de texto editable, haciendo
+% enfásis precisamente en la "posibilidad" de modificar el contenido de
+% esta.
+%
+%% |g05_DemoAxes.m|
+%
+% Proporciona un ejemplo de cómo posicionar axes y modificar sus
+% propiedades, además se tiene como ejemplo la representación gráfica de
+% funciones dentro de dichos elementos, utilizando la función plot y
+% pasando como argumento la referencia (handle) del axes en el que debe
+% mostrarse.
+% 
+%% |g06_DemoPopUpMenu.m|
+% 
+% Permite cambiar el color de fondo de la ventana |('figure')| utilizando
+% una lista de colores almacenada en un Pop-up-menu
+%
+%% |g07_DemoListBox.m|
+% Muestra como configurar el string de un listbox mediante el uso de un
+% cell array. Además de ejemplificarse como obtener el valor seleccionado
+% de la lista contenida en el listbox y el uso de un msgbox para mostrar
+% información o un mensaje mediante un interfaz gráfica.
+%
+%
+%% |g08_DemoSlider.m|
+% En esta interfaz gráfica se muestra el uso de un slider. El valor
+% obtenido del slider modifica el color de la ventana, en una variación
+% desde negro a blanco, pasando por las diversas tonalidades de grises.
+% 
+%
+%% |g09_DemoCheckBox.m|
+% El checkbox contenido en esta GUI permite controlar si la ventana es
+% redimensionable, lo anterior modificando la propiedad 'resize'.
+%
+%
+%% |g10_DemoRadioButtons|
+% Ejemplifica el uso de radio buttons dentro de un uibuttongroup para
+% seleccionar solamente una opción. En este caso se modifica el tipo de
+% fuente en los 'strings' de los radio buttons.
+%
+%
+%% |g11_DemoMenu.m|
+%
+%
+%
+%% |g12_HolaMundo.m|
+%% |g13_IntegraDeriva.m|
+%% |g14_MiniCalculadora.m|
+%% |g15_EditableListBox.m|
+%% |g16_ConversorLongitudes.m|
+%% |g17_Graficador.m|
+%% |g18_VisorImagenes.m|
+%% |g19_ImagenFondo.m|
+%% |g20_ColorRGB.m|
+
+
+##### SOURCE END #####
+--></body></html>

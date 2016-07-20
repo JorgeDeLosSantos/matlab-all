@@ -1,0 +1,11 @@
+function [t_d]=ed_cilindro(R,Ro)
+g=9.81;
+dhdt=@(t,h) (-(Ro/R)^2)*sqrt(2*g*h);
+[t,h]=ode45(dhdt,[0 150],[2])
+xlim([0 140])
+ylim([0 2])
+for i=1:length(h)
+    val=h(i);
+    if h(i)<0
+        v
+plot(t,h),

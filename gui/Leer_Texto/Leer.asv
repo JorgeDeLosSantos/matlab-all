@@ -1,0 +1,17 @@
+clear;clc;
+[filename, pathname] = uigetfile('*.txt', 'Pick an M-file');
+if isequal(filename,0)
+   return;
+else
+   Archivo=fullfile(pathname, filename);
+end
+Dat = fopen(Archivo,'r');
+n=1;
+while ~feof(Dat) 
+   leer_linea = fgetl(Dat);
+   if isempty(leer_linea) || ~ischar(leer_linea), break, end
+   C(n)= cellstr(leer_linea);
+   n=n+1;
+end
+fclose(Dat);
+C=C';

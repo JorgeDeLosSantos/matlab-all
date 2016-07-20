@@ -1,0 +1,11 @@
+clear;clc;
+% [x,y]=meshgrid(1:10);
+% z=cos(x)+sin(y);
+% h=surf(x,y,z);
+t = 0:0.5:10;
+x = cos(t);
+y = sin(t);
+z = t;
+h = plot3(x,y,z);
+M = getxyzdata(h);
+dlmwrite('C:\Users\User\Documents\Solidworks Modelos\datos.txt',M,'\t');

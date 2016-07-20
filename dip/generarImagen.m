@@ -1,0 +1,12 @@
+clear all;clc;
+A=imread('playa.jpg');
+a=10;
+B=A(1:a:end,1:a:end,:);
+% subplot(1,2,1);
+% imshow(A);
+% subplot(1,2,2);
+% imshow(B);
+pause(0.5);
+imwrite(B,'modif.png');
+% close(gcf);
+winopen('modif.png');

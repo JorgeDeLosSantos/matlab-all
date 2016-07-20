@@ -1,0 +1,12 @@
+#next {background: url('forward.png')} /* Give any object with a tag 'next' a nice background image*/
+
+uipanel uicontrol {ForegroundColor: 1 1 1} /* make all controls inside panels have red foreground color . */
+
+uicontrol.text {ForegroundColor: [1 0 1]} /* All text labels in bold face, please */
+uicontrol.text{
+	String: "Hola ---";
+}
+
+#mylist {String: "{'foo','bar','baz'}"} /* Fill mylist with some values (note that this is not actually 'styling')*/
+
+.checkbox , uipanel {FontAngle: italic} /* checkboxes and uipanel titles should have italic captions */

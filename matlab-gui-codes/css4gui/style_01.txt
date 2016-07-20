@@ -1,0 +1,38 @@
+#_figure_
+{
+    color = [0.8,0.9,0.6];
+    menubar = none;
+    position = [0,0,200,150];
+    name = Example 02;
+    numbertitle = off;
+}
+
+#_edit_
+{
+    backg = [1,1,0.8];
+    fontname = Arial;
+    fontsize = 12;
+    foregroundcolor = [0,0,1];
+}
+
+#_pushbutton_
+{
+    backg = [0.8,0.8,0.8];
+    fontname = DejaVu Sans;
+    foregroundcolor = [0,0,0];
+    fontsize = 12;
+}
+
+#_listbox_
+{
+    fontname = Arial;
+    fontsize = 12;
+}
+
+#_text_
+{
+    backg = [0.9,0.7,0.7];
+    foreg = r;
+    fontsize = 14;
+    fontweight = b;
+}

@@ -1,0 +1,11 @@
+clear;clc;
+X=imread('cianobacterias.jpg');
+%XB=edge(rgb2gray(X),'sobel');
+XB=im2bw(rgb2gray(X),0.5);
+XS=zeros(size(X),'uint8');
+XS(:,:,1)=uint8(XB).*X(:,:,1);
+XS(:,:,2)=uint8(XB).*X(:,:,2);
+XS(:,:,3)=uint8(XB).*X(:,:,3);
+imshow(X);
+figure()
+imshow(XS);

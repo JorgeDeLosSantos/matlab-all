@@ -1,0 +1,10 @@
+clear;clc;
+folio=input('Folio: ','s');
+nombre=input('Nombre: ','s');
+cantidad=input('Cantidad: ');
+cantidad=cur2str(cantidad);
+fecha=datestr(now,'dd-mmm-yyyy');
+A={folio,nombre,cantidad,fecha};
+fid=fopen('database/hist/hventas.dat','at+');
+fprintf(fid,'\n%s//%s//%s//%s',A{:,:});
+fclose(fid);

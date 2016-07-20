@@ -1,0 +1,80 @@
+<!--
+ CONFIDENTIAL AND CONTAINING PROPRIETARY TRADE SECRETS
+ Copyright 2007 The MathWorks, Inc.
+ The source code contained in this listing contains proprietary and
+ confidential trade secrets of The MathWorks, Inc.  The use, modification,
+ or development of derivative work based on the code or ideas obtained
+ from the code is prohibited without the express written permission of The
+ MathWorks, Inc. The disclosure of this code to any party not authorized
+ by The MathWorks, Inc. is strictly forbidden.
+ CONFIDENTIAL AND CONTAINING PROPRIETARY TRADE SECRETS
+ -->
+<html>
+<head>
+    <title>MATLAB WebFigures</title>
+    <script type="text/javascript" src='javascript/mathworks/util/DynamicLoader.js'></script>
+    <script type="text/javascript" src='javascript/external/jsonorg/jsr_class.js'></script>   
+
+    <script type='text/javascript'>        
+
+        function loadWebFigure() {
+        
+        	var jsLoader = new mathworks.util.DynamicLoader({					 
+		    		scriptRoot : "javascript/"				
+			});
+			
+			jsLoader.load(
+				{
+					moduleList:["mathworks/webfigures/WebFigureWidget.jsm",								
+								"mathworks/util/paramsToUrl.jsm"],
+								
+					onSuccess : function(){
+						
+							var box = document.getElementById('box');
+                
+							if (null === box || 0 === box.clientWidth || 0 === box.clientHeight) {
+								// if the page hasn't been formatted yet, try again in 250 ms
+								window.setTimeout('loadWebFigure()', 250);
+								return;
+							}
+
+                            var sessionID = mathworks.util.getJSESSIONID();
+
+                            var figure = {
+								getImageURL : function (renderParams) {
+								
+									var rParams = {};
+									for(var p in renderParams){
+										if( renderParams.hasOwnProperty(p) ){
+											rParams[p] = renderParams[p];
+										}									
+									}
+                                    rParams["name"]  = "$(NAME)";
+									rParams["scope"] = "$(SCOPE)";                                    
+                                    return "render" + sessionID + "?" +  mathworks.util.paramsToUrl(rParams);
+								},
+								
+								getProperties : function () {
+									return {
+										backgroundcolor:"$(BGCOLOR)", 
+										azimuth        :$(AZIMUTH), 
+										elevation      :$(ELEVATION)
+									};
+								}
+							};                  
+							    
+							var view   = 
+							    new mathworks.webfigures.WebFigureWidget(box, figure);							
+					},
+					
+					onError : function(error){
+					}
+				}
+			);
+        }
+    </script>
+</head>
+<body onload='loadWebFigure();' style='padding: 0px; margin: 0px;'>
+<div id='box' style='position:absolute; left:0px; top:0px; width:100%; height:100%;'></div>
+</body>
+</html>

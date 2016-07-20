@@ -1,0 +1,113 @@
+﻿*******************************
+Curso MATLAB para principiantes
+*******************************
+
+.. class:: center
+
+| **Autor:** Jorge De Los Santos
+| **Fecha:** 20/Nov/2014
+
+
+.. contents:: Contenido
+
+    
+
+.. Definiendo estilos "inline"
+.. role:: fuentes
+
+.. Logo MATLAB
+.. image:: src/logo.gif
+
+
+.. raw:: pdf
+
+    PageBreak
+
+
+Contenido del curso
+===================
+
+* Introducción (Welcome to...)
+* ¿Qué es MATLAB?
+* Descripción del entorno de desarrollo
+* Usando MATLAB como una calculadora
+* Crear y utilizar variables
+* Tipos de datos y operadores
+* Vectores
+* Matrices 
+* Algunas funciones matemáticas
+* Cadenas de caracteres (strings)
+* Ficheros de comandos (scripts)
+* Entrada de datos: la función input
+* Salida de datos: la función disp
+* Salida de datos con formato: fprintf y sprintf
+* Gráficas en 2D
+* Gráficas en 3D
+* Sentencia de control if-elseif-else
+* Sentencia de control switch-case
+* Bucle for
+* Bucle while
+* Una introducción a las funciones
+* Buenas prácticas de programación
+
+
+.. raw:: pdf
+
+    PageBreak
+	
+
+¿Qué es MATLAB?
+===============
+
+MATLAB es una herramienta de software matemático que ofrece un entorno de desarrollo integrado (IDE) con
+un lenguaje de programación propio (lenguaje M). Está disponible para las plataformas Unix, Windows, Mac OS X, 
+y GNU/Linux. (Fuente: :fuentes:`es.wikipedia.org`)
+
+
+Características de MATLAB
+-------------------------
+
+- Lenguaje de alto nivel
+- Interpretado
+- Multiplataforma
+- Software propietario
+- Multiparadigma *
+  
+
+Aplicaciones de MATLAB
+----------------------
+
+- Desarrollo de modelos matemáticos y de ingeniería
+- Simulación
+- Sistemas de control
+- Procesamiento de señales
+- Procesamiento de imágenes y vídeo
+- Computación simbólica *
+- Biología computacional
+- Modelado y análisis financiero
+
+
+Ventajas
+--------
+
+- Tiempo de desarrollo breve
+- Documentación extensa (integrada y externa)
+- Librerías/Toolbox para ¿casi todo?
+
+
+Desventajas
+-----------
+
+- Velocidad de ejecución "cuestionable"
+- Costo 
+
+
+Software/Lenguajes similares
+----------------------------
+
+- Python (numpy, matplotlib, scipy, opencv, simpy,...)
+- Octave
+- Scilab
+- Mathematica
+- Maple *
+

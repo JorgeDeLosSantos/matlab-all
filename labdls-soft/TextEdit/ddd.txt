@@ -1,0 +1,4 @@
+if name==2  
+    do this;
+    hashis; 
+end         

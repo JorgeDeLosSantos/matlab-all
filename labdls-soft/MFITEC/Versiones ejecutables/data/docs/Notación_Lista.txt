@@ -1,0 +1,11 @@
+SK - Sumatoria de coeficientes de pérdidas secundarias
+SKi - Sumatoria de coeficientes de pérdidas secundarias en impulsión
+SKa - Sumatoria de coeficientes de pérdidas secundarias en aspiración 
+F - Coeficiente de pérdidas por fricción
+Fa - Coeficiente de pérdidas por fricción aspiración
+Fi - Coeficiente de pérdidas por fricción impulsión
+va - velocidad aspiración
+vi - velocidad impulsión
+
+
+

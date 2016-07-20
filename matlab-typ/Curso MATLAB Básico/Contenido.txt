@@ -1,0 +1,28 @@
+CONTENIDO CURSO MATLAB BÁSICo
+
+1. Introducción al entorno de desarrollo
+2. Tipos de datos y operadores
+3. Matrices y vectores
+4. Variables simbólicas, manipulación algebraica y cálculo.
+5. Gráficas en 2D
+6. Gráficas en 3D
+7. Ficheros de comandos "scripts"
+8. Entradas y salidas en el Command Window
+9. Sentencias de control (if, elseif, else, swicth case)
+10. Bucles / Ciclos (for, while)
+11. Sentencias try-catch, break, pause, continue y return
+12. Funciones y subfunciones
+13. Cell arrays
+14. Estructuras
+15. Exportar e importar variables del workspace
+16. Exportar e importar datos de un fichero
+17. Exportar e importar datos de Microsoft Excel
+18. Análisis básico de datos
+19. Manipulación de archivos y directorios
+20. Solución de ecuaciones diferenciales
+21. Introducción al procesamiento de imágenes.
+22. Introducción a las animaciones.
+23. Introducción al desarrollo de GUIs
+24. Depurar y exportar código.
+25. Compilar aplicaciones (crear ejcutables)
+

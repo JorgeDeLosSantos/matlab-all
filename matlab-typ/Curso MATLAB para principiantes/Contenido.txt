@@ -1,0 +1,16 @@
+* Introducción (Welcome to...)
+* ¿Qué es MATLAB?
+* Descripción del entorno de desarrollo
+* Usando MATLAB como una calculadora
+* Crear y utilizar variables
+* Tipos de datos y operadores
+* Vectores
+* Matrices 
+* Algunas funciones matemáticas
+* Cadenas de caracteres (strings)
+* Gráficas en 2D
+* Gráficas en 3D
+* Ficheros de comandos (scripts)
+* Entrada de datos: la función input
+* Salida de datos: la función disp
+* 
